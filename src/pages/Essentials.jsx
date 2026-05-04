@@ -585,7 +585,7 @@ export default function Essentials() {
 
         {/* ── 2. git add Tabs ── */}
         <div className="fade-in-section" ref={ref3}>
-          <h3 className="subsection-title">git add — Surgical Staging</h3>
+          <h3 id="git-add" className="subsection-title">git add — Surgical Staging</h3>
           <p className="body-text">
             <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 7px', borderRadius: 4, border: '1px solid var(--border)' }}>git add .</code> is training wheels. Production engineers use a spectrum of staging tools depending on intent.
           </p>
@@ -666,7 +666,7 @@ e  - manually edit this hunk in your $EDITOR (surgical precision)`} />
 
         {/* ── 4. Commit Messages ── */}
         <div className="fade-in-section" ref={ref5}>
-          <h3 className="subsection-title">git commit — Writing History</h3>
+          <h3 id="git-commit" className="subsection-title">git commit — Writing History</h3>
           <p className="body-text">
             A commit message is the only in-code documentation that answers <em>why</em> a change was made. File diffs show <em>what</em> changed — the message explains the <strong>intent</strong>. Six months from now, a colleague (or you) will <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git log</code> or <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git blame</code> and encounter your words. Make them count.
           </p>
@@ -762,7 +762,7 @@ git commit --amend --no-edit
         <div className="divider" />
 
         {/* ── 5. Push ── */}
-        <h3 className="subsection-title">git push — Safe Remote Writes</h3>
+        <h3 id="git-push" className="subsection-title">git push — Safe Remote Writes</h3>
         <p className="body-text">
           Pushing is the act of writing your local commits to a remote. It seems simple, but the difference between <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>--force</code> and <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>--force-with-lease</code> is the difference between a smooth team workflow and a catastrophic data loss incident.
         </p>
@@ -821,7 +821,7 @@ git config --global push.default nothing
         <div className="divider" />
 
         {/* ── 6. Fetch vs Pull ── */}
-        <h3 className="subsection-title">git fetch vs git pull — The Hidden Difference</h3>
+        <h3 id="git-fetch-pull" className="subsection-title">git fetch vs git pull — The Hidden Difference</h3>
         <p className="body-text">
           <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git pull</code> is exactly <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git fetch</code> + <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git merge</code> (or <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git rebase</code> with config). Understanding this split changes how you work.
         </p>

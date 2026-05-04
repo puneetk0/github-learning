@@ -1034,7 +1034,7 @@ export default function Advanced() {
         ══════════════════════════════════════════════════ */}
         <section className="adv-section fade-in-section">
           <div className="adv-label">State Management</div>
-          <h2 className="adv-title">git stash — The LIFO work stack</h2>
+          <h2 id="git-stash" className="adv-title">git stash — The LIFO work stack</h2>
           <p className="adv-desc">
             You're halfway through a feature when an urgent bug report arrives. You can't commit half-finished code. The stash is Git's designated place for incomplete work — a stack you push onto and pop from.
           </p>
@@ -1075,7 +1075,7 @@ export default function Advanced() {
         ══════════════════════════════════════════════════ */}
         <section className="adv-section fade-in-section">
           <div className="adv-label">Debugging</div>
-          <h2 className="adv-title">git bisect — O(log N) bug hunting</h2>
+          <h2 id="git-bisect" className="adv-title">git bisect — O(log N) bug hunting</h2>
           <p className="adv-desc">
             A bug exists in the current build but not in a release from 3 months ago. That's potentially 500 commits to search. Linear inspection would take days. Binary search finds the culprit in ⌈log₂(500)⌉ = 9 steps.
           </p>
@@ -1148,7 +1148,7 @@ git bisect run curl -sf http://localhost:3000/health`}
         ══════════════════════════════════════════════════ */}
         <section className="adv-section fade-in-section">
           <div className="adv-label">Code Archaeology</div>
-          <h2 className="adv-title">git blame — Who wrote this and why</h2>
+          <h2 id="git-blame" className="adv-title">git blame — Who wrote this and why</h2>
           <p className="adv-desc">
             <code style={{ fontFamily: 'var(--font-mono)', fontSize: 14 }}>git blame</code> annotates every line of a file with the commit hash, author, and date of the last change. The real skill is knowing how to use it — and when the output lies.
           </p>

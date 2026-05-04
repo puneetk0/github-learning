@@ -706,7 +706,7 @@ export default function Undo() {
 
         {/* ── 2. git revert ── */}
         <div className="fade-in-section" ref={r3}>
-          <h3 className="subsection-title">git revert — The Only Safe Undo for Shared History</h3>
+          <h3 id="git-revert" className="subsection-title">git revert — The Only Safe Undo for Shared History</h3>
           <p className="body-text">
             <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git revert</code> creates a <strong>new commit</strong> whose diff is the exact mathematical inverse of the target commit. The original bad commit stays in history — it's not deleted. The new revert commit cancels out its effect going forward.
           </p>
@@ -758,7 +758,7 @@ git merge feature/payments       # now re-merge works correctly`} />
 
         {/* ── 3. git reset ── */}
         <div className="fade-in-section" ref={r4}>
-          <h3 className="subsection-title">git reset — Rewriting Local History</h3>
+          <h3 id="git-reset" className="subsection-title">git reset — Rewriting Local History</h3>
           <p className="body-text">
             <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git reset</code> moves the current branch pointer to a different commit. The three modes control how far the reset "cascades" through Git's three trees: the repository (commit history), the index (staging area), and the working directory.
           </p>
@@ -808,7 +808,7 @@ git reset HEAD~3 src/auth.js
 
         {/* ── 4. git restore ── */}
         <div className="fade-in-section" ref={r5}>
-          <h3 className="subsection-title">git restore — Discard Without Moving Pointers</h3>
+          <h3 id="git-restore" className="subsection-title">git restore — Discard Without Moving Pointers</h3>
           <p className="body-text">
             Introduced in Git 2.23, <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git restore</code> was split from <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git reset</code> and <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git checkout</code> to give file-level undo its own clear command. It manipulates files in the working directory and index without touching the branch pointer.
           </p>
@@ -860,7 +860,7 @@ git checkout a3f9c12~1 -- src/legacy.js`} />
 
         {/* ── 5. reflog ── */}
         <div className="fade-in-section" ref={r6}>
-          <h3 className="subsection-title">git reflog — The Ultimate Safety Net</h3>
+          <h3 id="git-reflog" className="subsection-title">git reflog — The Ultimate Safety Net</h3>
           <p className="body-text">
             The reflog is Git's flight recorder. Every time HEAD moves — from a commit, reset, rebase, merge, checkout, or cherry-pick — Git writes an entry to <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>.git/logs/HEAD</code>. Even after a <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>git reset --hard</code>, the "lost" commits are still in the object store — just unreachable. The reflog is how you find them.
           </p>

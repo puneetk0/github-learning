@@ -17,6 +17,7 @@ import {
   ListChecks,
   FlaskConical
 } from 'lucide-react';
+import CommandSearch from './CommandSearch';
 import './Sidebar.css';
 
 export default function Sidebar() {
@@ -52,6 +53,9 @@ export default function Sidebar() {
           <GitBranch size={24} color="var(--accent)" />
           <div className="sidebar-logo-text">Git Mastery</div>
         </div>
+      </div>
+      <div style={{ padding: '0 16px' }}>
+        <CommandSearch />
       </div>
       <div className="sidebar-nav">
         {links.map((link) => {

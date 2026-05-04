@@ -15,7 +15,7 @@ export default function Setup() {
         <div className="section-header-wrap">
           <div className="section-bg-num">02</div>
           <div className="section-label">Introduction</div>
-          <h2 className="section-title">Setup & Configuration</h2>
+          <h2 id="git-config" className="section-title">Setup & Configuration</h2>
           <p className="section-desc">
             Mastering the configuration scopes, SSH authentication, GPG commit signing, and building bulletproof ignore rules.
           </p>
@@ -93,7 +93,7 @@ export default function Setup() {
 
         <div className="divider"></div>
 
-        <h3 className="subsection-title">Authentication: SSH vs HTTPS</h3>
+        <h3 id="git-clone" className="subsection-title">Authentication: SSH vs HTTPS</h3>
         <p className="body-text">
           Never use HTTPS for daily git operations. HTTPS requires managing Personal Access Tokens (PATs) which expire and must be copy-pasted. SSH uses asymmetric cryptography.
         </p>

@@ -800,7 +800,7 @@ export default function Branching() {
         <div className="section-header-wrap" ref={r1}>
           <div className="section-bg-num">06</div>
           <div className="section-label">Collaboration</div>
-          <h2 className="section-title">Branching, Merging & Rebasing</h2>
+          <h2 id="git-branch" className="section-title">Branching, Merging & Rebasing</h2>
           <p className="section-desc">
             The mathematics of combining divergent timelines. A commit graph is a Directed Acyclic Graph — every merge and rebase is a precise graph operation. Understanding the topology determines which algorithm Git uses.
           </p>
@@ -812,7 +812,7 @@ export default function Branching() {
 
         {/* ── 1. Merge Topologies ── */}
         <div className="fade-in-section" ref={r2}>
-          <h3 className="subsection-title">Merge Topologies — Click to Explore</h3>
+          <h3 id="git-merge" className="subsection-title">Merge Topologies — Click to Explore</h3>
           <p className="body-text">
             Git doesn't have a single merge algorithm. The one it picks depends entirely on the shape of the commit graph. Click each strategy below and step through the graph transformation.
           </p>
@@ -883,7 +883,7 @@ git diff $(git merge-base main feature/auth) feature/auth`} />
 
         {/* ── 2. Rebase Engine ── */}
         <div className="fade-in-section" ref={r3}>
-          <h3 className="subsection-title">The Rebase Engine — Animated</h3>
+          <h3 id="git-rebase" className="subsection-title">The Rebase Engine — Animated</h3>
           <p className="body-text">
             Rebasing rewrites history by replaying commits onto a new base. Every replayed commit gets a <strong>brand new SHA</strong> — even if the file content is identical — because the parent pointer is different, and the SHA includes the parent hash. Step through exactly what happens internally:
           </p>
@@ -997,7 +997,7 @@ drop m3n4o5 more fixes
 
         {/* ── 4. Cherry-pick ── */}
         <div className="fade-in-section" ref={r5}>
-          <h3 className="subsection-title">git cherry-pick — Surgical Commit Copying</h3>
+          <h3 id="git-cherry-pick" className="subsection-title">git cherry-pick — Surgical Commit Copying</h3>
           <p className="body-text">
             Cherry-pick applies the diff of a specific commit to your current branch. It creates a new commit object with the same change but a different SHA (different parent). It's the equivalent of: "I don't want the whole branch, just that one thing."
           </p>
@@ -1043,7 +1043,7 @@ drop m3n4o5 more fixes
 
         {/* ── 5. Worktrees ── */}
         <div className="fade-in-section" ref={r6}>
-          <h3 className="subsection-title">git worktree — Multiple Checkouts</h3>
+          <h3 id="git-worktree" className="subsection-title">git worktree — Multiple Checkouts</h3>
           <p className="body-text">
             A worktree lets you have multiple branches checked out simultaneously in separate directories on disk, all sharing the same <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', padding: '2px 6px', borderRadius: 4, border: '1px solid var(--border)' }}>.git</code> database. No more stash-switch-fix-switch-unstash cycles when an urgent bug arrives mid-feature.
           </p>
