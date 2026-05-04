@@ -83,6 +83,9 @@ const styles = `
 
   @keyframes fadeSlide { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
+  .fade-in-section { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+  .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+
   /* ═══════════════════════════════════════════════════
      FORK vs BRANCH diagram
   ═══════════════════════════════════════════════════ */
@@ -498,7 +501,7 @@ const INITIAL_CHECKS = [
 ];
 
 const INITIAL_REVIEWERS = [
-  { name: 'alice', status: 'pending', avatar: '#3b82f6' },
+  { name: 'alice', status: 'changes', avatar: '#3b82f6' },
   { name: 'carol', status: 'pending', avatar: '#8b5cf6' },
 ];
 
@@ -880,7 +883,7 @@ function ActionsBuilder() {
   const removeStep = (id) => setSteps(s => s.filter(x => x !== id));
 
   const triggerObj = TRIGGERS.find(t => t.id === trigger);
-  const stepObjs = steps.map(id => AVAILABLE_STEPS.find(s => s.id === id)).filter(Boolean);
+  const stepObjs = RUN_SEQUENCE.filter(id => steps.includes(id)).map(id => AVAILABLE_STEPS.find(s => s.id === id)).filter(Boolean);
 
   const runWorkflow = () => {
     setRunning(true); setRunLog([]); setRunIdx(0);
@@ -1310,7 +1313,7 @@ gh pr merge 247 --squash --delete-branch`}
 
           <h3 className="gh-sub">Secrets and environments</h3>
           <p className="gh-body">
-            API keys, deploy tokens, and credentials never go in the YAML file directly. They're stored in <strong>GitHub Secrets</strong> (Settings → Secrets and variables → Actions) and referenced as <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13 }}>{`${{ secrets.MY_SECRET }}`}</code> in workflows. They're encrypted at rest, masked in logs, and never exposed to pull requests from forks (a security boundary).
+            API keys, deploy tokens, and credentials never go in the YAML file directly. They're stored in <strong>GitHub Secrets</strong> (Settings → Secrets and variables → Actions) and referenced as <code style={{ fontFamily: 'var(--font-mono)', fontSize: 13 }}>{"${{ secrets.MY_SECRET }}"}</code> in workflows. They're encrypted at rest, masked in logs, and never exposed to pull requests from forks (a security boundary).
           </p>
 
           <CodeBlock lang="yaml" title="Environment gates — approval before production deploy">
