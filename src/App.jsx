@@ -16,6 +16,7 @@ import Workflows from './pages/Workflows';
 import BestPractices from './pages/BestPractices';
 import StartupPR from './pages/StartupPR';
 import Cheatsheet from './pages/Cheatsheet';
+import GitDarkArts from './pages/DarkArts';
 
 import './App.css';
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="/best-practices" element={<BestPractices />} />
           <Route path="/startup-pr" element={<StartupPR />} />
           <Route path="/cheatsheet" element={<Cheatsheet />} />
+          <Route path="/dark-arts" element={<GitDarkArts />} />
         </Routes>
       </main>
     </div>

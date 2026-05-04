@@ -14,7 +14,8 @@ import {
   ShieldAlert,
   GitPullRequest,
   Network,
-  ListChecks
+  ListChecks,
+  FlaskConical
 } from 'lucide-react';
 import './Sidebar.css';
 
@@ -32,13 +33,14 @@ export default function Sidebar() {
     
     { path: '/advanced', icon: <Layers />, label: '8. Advanced Git', section: 'Mastery' },
     { path: '/undo', icon: <RotateCcw />, label: '9. Undoing Things', section: 'Mastery' },
+    { path: '/dark-arts', icon: <FlaskConical />, label: '10. Git Dark Arts', section: 'Mastery' },
     
-    { path: '/github-features', icon: <GitPullRequest />, label: '10. GitHub Features', section: 'Ecosystem' },
-    { path: '/workflows', icon: <Network />, label: '11. Real-World Workflows', section: 'Ecosystem' },
+    { path: '/github-features', icon: <GitPullRequest />, label: '11. GitHub Features', section: 'Ecosystem' },
+    { path: '/workflows', icon: <Network />, label: '12. Real-World Workflows', section: 'Ecosystem' },
     
-    { path: '/best-practices', icon: <ShieldAlert />, label: '12. Best Practices', section: 'Reference' },
-    { path: '/startup-pr', icon: <GitCommit />, label: '13. Your First PR', section: 'Reference' },
-    { path: '/cheatsheet', icon: <ListChecks />, label: '14. Cheatsheet', section: 'Reference' },
+    { path: '/best-practices', icon: <ShieldAlert />, label: '13. Best Practices', section: 'Reference' },
+    { path: '/startup-pr', icon: <GitCommit />, label: '14. Your First PR', section: 'Reference' },
+    { path: '/cheatsheet', icon: <ListChecks />, label: '15. Cheatsheet', section: 'Reference' },
   ];
 
   let currentSection = '';
