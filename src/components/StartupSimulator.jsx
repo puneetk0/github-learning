@@ -100,7 +100,7 @@ export default function StartupSimulator() {
         <div style={{ fontSize: '12px', color: 'var(--text2)' }}>Progress: {step}/{stages.length}</div>
       </div>
       
-      <div style={{ background: '#0a0a0f', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', display: 'flex', flexDirection: 'column', height: '400px' }}>
+      <div style={{ background: 'var(--bg2)', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', display: 'flex', flexDirection: 'column', height: '400px', color: 'var(--text)' }}>
         <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
           {history.map((h, i) => (
             <div key={i} style={{ 

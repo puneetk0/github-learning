@@ -84,7 +84,7 @@ export default function StashStack() {
           <div style={{ 
             flex: 1,
             minHeight: '150px',
-            background: '#0a0a0f', 
+            background: 'var(--bg2)', 
             border: '1px solid var(--border)',
             borderRadius: '8px',
             padding: '16px',

@@ -46,7 +46,7 @@ export default function ResetModeVisualizer() {
         <div className="cr-title">Visualizing: git reset HEAD~1</div>
       </div>
       
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', padding: '24px', background: '#0a0a0f' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', padding: '24px', background: 'var(--bg2)' }}>
         
         {/* Buttons */}
         <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>

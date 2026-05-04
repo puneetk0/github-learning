@@ -21,7 +21,7 @@ export default function RebaseVisualizer() {
         </div>
       </div>
       
-      <div style={{ padding: '40px 20px', background: '#0a0a0f', position: 'relative', overflowX: 'auto', height: '250px' }}>
+      <div style={{ padding: '40px 20px', background: 'var(--bg2)', position: 'relative', overflowX: 'auto', height: '250px' }}>
         <svg width="700" height="200" viewBox="0 0 700 200">
           {/* Main Branch Line */}
           <line x1="50" y1="150" x2="600" y2="150" stroke="var(--border)" strokeWidth="4" />
@@ -59,7 +59,7 @@ export default function RebaseVisualizer() {
             <text x="350" y="40" textAnchor="middle" fill="var(--green)" fontSize="10">E</text>
             
             <rect x="380" y="48" width="60" height="24" rx="4" fill="var(--green)" />
-            <text x="410" y="65" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">feature</text>
+            <text x="410" y="65" textAnchor="middle" fill="#fff" fontSize="12" fontWeight="bold">feature</text>
           </g>
 
           {/* Rebase Path */}
@@ -82,7 +82,7 @@ export default function RebaseVisualizer() {
             <text x="450" y="40" textAnchor="middle" fill="var(--green)" fontSize="10">E'</text>
             
             <rect x="480" y="48" width="60" height="24" rx="4" fill="var(--green)" />
-            <text x="510" y="65" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">feature</text>
+            <text x="510" y="65" textAnchor="middle" fill="#fff" fontSize="12" fontWeight="bold">feature</text>
           </g>
         </svg>
       </div>

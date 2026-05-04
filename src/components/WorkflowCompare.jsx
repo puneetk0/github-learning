@@ -25,7 +25,7 @@ export default function WorkflowCompare() {
         </div>
       </div>
       
-      <div style={{ padding: '24px', background: '#0a0a0f', overflowX: 'auto' }}>
+      <div style={{ padding: '24px', background: 'var(--bg2)', overflowX: 'auto' }}>
         
         {activeWorkflow === 'trunk' ? (
           <div style={{ minWidth: '600px' }}>

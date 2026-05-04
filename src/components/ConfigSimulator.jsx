@@ -81,7 +81,7 @@ export default function ConfigSimulator() {
       
       <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
         {/* Terminal Side */}
-        <div style={{ flex: '1 1 300px', background: '#0a0a0f', borderRadius: '8px', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', display: 'flex', flexDirection: 'column', height: '300px' }}>
+        <div style={{ flex: '1 1 300px', background: 'var(--bg2)', borderRadius: '8px', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', display: 'flex', flexDirection: 'column', height: '300px', color: 'var(--text)' }}>
           <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
             {history.map((h, i) => (
               <div key={i} style={{ 

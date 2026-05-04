@@ -69,7 +69,7 @@ export default function GitIgnoreBuilder() {
             <code>.DS_Store</code>
           </label>
           
-          <div style={{ marginTop: '20px', background: '#0a0a0f', padding: '12px', borderRadius: '6px', fontFamily: 'var(--font-mono)', fontSize: '12px', whiteSpace: 'pre-wrap', color: 'var(--blue)' }}>
+          <div style={{ marginTop: '20px', background: 'var(--bg2)', padding: '12px', borderRadius: '6px', fontFamily: 'var(--font-mono)', fontSize: '12px', whiteSpace: 'pre-wrap', color: 'var(--blue)' }}>
             <span style={{ color: 'var(--text2)', display: 'block', marginBottom: '8px' }}># .gitignore preview</span>
             {generatedConfig || <span style={{ color: 'var(--text3)' }}># Empty</span>}
           </div>

@@ -65,7 +65,7 @@ export default function InteractivePatchStaging() {
           <div className="cr-title">Terminal: git add -p</div>
           <button className="btn" onClick={reset}>Restart Simulation</button>
         </div>
-        <div style={{ background: '#0a0a0f', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', color: '#fff' }}>
+        <div style={{ background: 'var(--bg2)', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--text)' }}>
           <div style={{ color: 'var(--green)', marginBottom: '16px' }}>$ git add -p</div>
           <div>Patch staging complete.</div>
           <br/>
@@ -96,7 +96,7 @@ export default function InteractivePatchStaging() {
         <div className="cr-title">Terminal: git add -p</div>
       </div>
       
-      <div style={{ background: '#0a0a0f', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', color: '#fff' }}>
+      <div style={{ background: 'var(--bg2)', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--text)' }}>
         <div style={{ color: 'var(--green)', marginBottom: '16px' }}>$ git add -p cart.js</div>
         
         <div style={{ color: '#fff', marginBottom: '8px' }}>diff --git a/cart.js b/cart.js</div>

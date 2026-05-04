@@ -17,14 +17,22 @@ export default function DetachedHeadExplorer() {
         <div className="cr-controls" style={{ display: 'flex', gap: '8px' }}>
           <button 
             className="btn"
-            style={{ background: headTarget === 'main' ? 'var(--blue)' : 'var(--surface)', border: '1px solid var(--border)' }}
+            style={{ 
+              background: headTarget === 'main' ? 'var(--blue)' : 'var(--surface)', 
+              color: headTarget === 'main' ? '#fff' : 'var(--text)',
+              border: '1px solid var(--border)' 
+            }}
             onClick={() => setHeadTarget('main')}
           >
             git checkout main
           </button>
           <button 
             className="btn"
-            style={{ background: headTarget === 'e4f5g6h' ? 'var(--red)' : 'var(--surface)', border: '1px solid var(--border)' }}
+            style={{ 
+              background: headTarget === 'e4f5g6h' ? 'var(--red)' : 'var(--surface)', 
+              color: headTarget === 'e4f5g6h' ? '#fff' : 'var(--text)',
+              border: '1px solid var(--border)' 
+            }}
             onClick={() => setHeadTarget('e4f5g6h')}
           >
             git checkout e4f5g6h
@@ -32,7 +40,7 @@ export default function DetachedHeadExplorer() {
         </div>
       </div>
 
-      <div style={{ padding: '40px 20px', background: '#0a0a0f', position: 'relative', overflowX: 'auto' }}>
+      <div style={{ padding: '40px 20px', background: 'var(--bg2)', position: 'relative', overflowX: 'auto' }}>
         <svg width="700" height="200" viewBox="0 0 700 200">
           {/* Commit Line */}
           <line x1="50" y1="100" x2="600" y2="100" stroke="var(--border)" strokeWidth="4" />
@@ -52,7 +60,7 @@ export default function DetachedHeadExplorer() {
           {/* Branch Pointer (main) */}
           <g style={{ transition: 'all 0.3s ease' }} transform={`translate(${commits[3].x}, 50)`}>
             <rect x="-30" y="-15" width="60" height="24" rx="4" fill="var(--green)" />
-            <text x="0" y="2" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">main</text>
+            <text x="0" y="2" textAnchor="middle" fill="#fff" fontSize="12" fontWeight="bold">main</text>
             <path d="M 0 9 L 0 30" stroke="var(--green)" strokeWidth="2" markerEnd="url(#arrow-green)" />
           </g>
 

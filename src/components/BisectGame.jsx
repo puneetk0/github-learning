@@ -62,7 +62,7 @@ export default function BisectGame() {
         {status !== 'start' && <button className="btn" onClick={startNewGame}>Restart Game</button>}
       </div>
       
-      <div style={{ padding: '24px', background: '#0a0a0f' }}>
+      <div style={{ padding: '24px', background: 'var(--bg2)' }}>
         {status === 'start' ? (
           <div style={{ textAlign: 'center', padding: '40px 0' }}>
             <h3 style={{ color: 'var(--text)', marginBottom: '16px' }}>Find the bug in 4 steps</h3>

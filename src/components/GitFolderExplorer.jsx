@@ -66,7 +66,7 @@ export default function GitFolderExplorer() {
       
       <div style={{ display: 'flex', height: '350px' }}>
         {/* File Tree */}
-        <div style={{ width: '250px', background: '#0a0a0f', borderRight: '1px solid var(--border)', overflowY: 'auto', padding: '8px 0' }}>
+        <div style={{ width: '250px', background: 'var(--bg2)', borderRight: '1px solid var(--border)', overflowY: 'auto', padding: '8px 0' }}>
           <TreeItem name=".git" type="folder" id="root" depth={0}>
             <TreeItem name="HEAD" type="file" fileKey="HEAD" depth={1} />
             <TreeItem name="config" type="file" fileKey="config" depth={1} />

@@ -54,7 +54,7 @@ export default function SearchableCheatsheet() {
             onChange={e => setQuery(e.target.value)}
             style={{ 
               width: '100%', 
-              background: '#0a0a0f', 
+              background: 'var(--surface)', 
               border: '1px solid var(--border)', 
               borderRadius: '4px', 
               padding: '8px 12px 8px 34px',
@@ -68,7 +68,7 @@ export default function SearchableCheatsheet() {
       <div style={{ padding: '0', background: 'var(--surface)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', textAlign: 'left' }}>
           <thead>
-            <tr style={{ borderBottom: '1px solid var(--border)', background: '#0a0a0f' }}>
+            <tr style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg2)' }}>
               <th style={{ padding: '12px 16px', width: '100px', color: 'var(--text2)' }}>Category</th>
               <th style={{ padding: '12px 16px', width: '250px', color: 'var(--text2)' }}>Command</th>
               <th style={{ padding: '12px 16px', color: 'var(--text2)' }}>What it does</th>
