@@ -1,0 +1,148 @@
+.branch-playground {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.bp-branch-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: auto;
+}
+
+.bp-label {
+  font-size: 12px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.bp-branch-selector select {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.bp-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bp-btn:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.bp-btn.merge:hover:not(:disabled) {
+  background: var(--green);
+  border-color: var(--green);
+  color: #000;
+}
+
+.bp-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.bp-canvas-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: -10px -10px;
+}
+
+.bp-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2000px; /* arbitrary large width for scrolling */
+  height: 100%;
+  pointer-events: none;
+}
+
+.bp-path-anim {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 0.6s ease forwards;
+}
+
+@keyframes drawPath {
+  to { stroke-dashoffset: 0; }
+}
+
+.bp-nodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2000px;
+  height: 100%;
+}
+
+.bp-node {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 0 0 4px var(--bg3);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform: scale(0);
+}
+
+@keyframes popIn {
+  to { transform: scale(1); }
+}
+
+.bp-node.main-branch {
+  background: var(--accent);
+  color: white;
+}
+
+.bp-node.feature-branch {
+  background: var(--blue);
+  color: white;
+}

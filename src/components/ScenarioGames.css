@@ -1,0 +1,154 @@
+.scenario-games {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 32px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.sg-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+
+.sg-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sg-content {
+  padding: 24px;
+}
+
+.sg-scenario-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.sg-context {
+  font-size: 14.5px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  background: var(--bg2);
+  padding: 16px;
+  border-left: 3px solid var(--border2);
+  border-radius: 4px;
+}
+
+.sg-question {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.sg-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sg-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sg-opt:not(:disabled):hover {
+  border-color: var(--accent);
+  background: rgba(124, 106, 247, 0.05);
+}
+
+.sg-opt-marker {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sg-opt.selected.correct {
+  border-color: var(--green);
+  background: rgba(34, 211, 160, 0.1);
+  color: var(--green);
+}
+
+.sg-opt.selected.wrong {
+  border-color: var(--red);
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--red);
+}
+
+.sg-opt.correct-unselected {
+  border-color: var(--green);
+  background: rgba(34, 211, 160, 0.05);
+  border-style: dashed;
+}
+
+.sg-feedback {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sg-feedback.correct {
+  background: rgba(34, 211, 160, 0.08);
+  border: 1px solid rgba(34, 211, 160, 0.3);
+  color: var(--green);
+}
+
+.sg-feedback.wrong {
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: var(--text);
+}
+
+.sg-next-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s;
+}
+
+.sg-next-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}

@@ -1,0 +1,35 @@
+.callout {
+  display: flex;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.callout.tip { background: rgba(34,211,160,0.07); border-left: 3px solid var(--green); }
+.callout.warn { background: rgba(251,191,36,0.07); border-left: 3px solid var(--yellow); }
+.callout.danger { background: rgba(248,113,113,0.07); border-left: 3px solid var(--red); }
+.callout.info { background: rgba(96,165,250,0.07); border-left: 3px solid var(--blue); }
+
+.callout-icon { 
+  flex-shrink: 0; 
+  margin-top: 2px; 
+}
+
+.callout.tip .callout-icon { color: var(--green); }
+.callout.warn .callout-icon { color: var(--yellow); }
+.callout.danger .callout-icon { color: var(--red); }
+.callout.info .callout-icon { color: var(--blue); }
+
+.callout-content strong { color: var(--text); font-weight: 700; }
+.callout-content span { color: var(--text2); }
+
+.callout-content p {
+  margin-bottom: 8px;
+}
+
+.callout-content p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,143 @@
+.workflow-vis {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.workflow-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.wf-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.wf-btn:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124,106,247,0.3);
+}
+
+.wf-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.wf-btn.reset {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text3);
+}
+
+.wf-btn.reset:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.workflow-canvas {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.wf-zone {
+  flex: 1;
+  min-width: 180px;
+  background: var(--surface);
+  border: 1px dashed var(--border2);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.zone-header {
+  font-family: var(--font-display);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.file-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100px;
+}
+
+.file-node {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.file-node:hover {
+  transform: scale(1.05);
+}
+
+.file-node.working {
+  background: rgba(248,113,113,0.15);
+  border: 1px solid var(--red);
+  color: #fff;
+}
+
+.file-node.staging {
+  background: rgba(251,191,36,0.15);
+  border: 1px solid var(--yellow);
+  color: #fff;
+}
+
+.file-node.local {
+  background: rgba(96,165,250,0.15);
+  border: 1px solid var(--blue);
+  color: #fff;
+}
+
+.file-node.remote {
+  background: rgba(34,211,160,0.15);
+  border: 1px solid var(--green);
+  color: #fff;
+  cursor: default;
+}
+
+.file-node.remote:hover {
+  transform: none;
+}
+
+.wf-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--border2);
+  font-family: var(--font-mono);
+}
