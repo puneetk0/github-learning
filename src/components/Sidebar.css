@@ -104,7 +104,7 @@
 }
 
 .nav-item.active {
-  background: rgba(124,106,247,0.1);
+  background: var(--glow);
   color: var(--accent);
   border-left-color: var(--accent);
 }

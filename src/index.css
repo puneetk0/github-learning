@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Montserrat:wght@800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg: #050508;
-  --bg2: #0a0a0f;
-  --bg3: #0f0f1a;
-  --surface: #12121c;
-  --surface2: #181825;
-  --border: #222236;
-  --border2: #30304a;
-  --text: #f0f0f5;
-  --text2: #a5a5c5;
-  --text3: #6b6b9e;
-  --accent: #7c6af7;
-  --accent2: #a855f7;
-  --green: #22d3a0;
-  --red: #f87171;
-  --yellow: #fbbf24;
-  --blue: #60a5fa;
-  --orange: #fb923c;
-  --pink: #f472b6;
-  --glow: rgba(124, 106, 247, 0.2);
+  --bg: #ffffff;
+  --bg2: #f8f9fa;
+  --bg3: #e9ecef;
+  --surface: #ffffff;
+  --surface2: #f1f3f5;
+  --border: #dee2e6;
+  --border2: #ced4da;
+  --text: #1a1a2e;
+  --text2: #4a5568;
+  --text3: #718096;
+  --accent: #3b82f6;
+  --accent2: #8b5cf6;
+  --green: #059669;
+  --red: #dc2626;
+  --yellow: #d97706;
+  --blue: #2563eb;
+  --orange: #ea580c;
+  --pink: #db2777;
+  --glow: rgba(59, 130, 246, 0.15);
   --sidebar-w: 280px;
   --font-mono: 'JetBrains Mono', monospace;
   --font-display: 'Montserrat', sans-serif;
@@ -83,14 +83,15 @@ body {
 .hero-glow {
   position: absolute;
   width: 600px; height: 400px;
-  background: radial-gradient(ellipse, rgba(124,106,247,0.12), transparent 70%);
+  background: radial-gradient(ellipse, var(--glow), transparent 70%);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
 .section {
-  padding: 80px 60px;
+  padding: 80px 0;
   border-bottom: 1px solid var(--border);
-  max-width: 1000px;
+  width: 80%;
+  margin: 0 10%;
 }

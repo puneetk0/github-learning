@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Menu } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import Intro from './pages/Intro';
 import Setup from './pages/Setup';
@@ -27,11 +28,20 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   return (
-    <div className="app-container">
+    <div className={`app-container ${isSidebarOpen ? '' : 'sidebar-closed'}`}>
       <ScrollToTop />
-      <Sidebar />
+      <Sidebar isOpen={isSidebarOpen} />
       <main className="main-content">
+        <button 
+          className="sidebar-toggle-btn" 
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          title="Toggle Sidebar"
+        >
+          <Menu size={20} />
+        </button>
         <Routes>
           <Route path="/" element={<Navigate to="/intro" replace />} />
           <Route path="/intro" element={<Intro />} />
