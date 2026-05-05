@@ -81,14 +81,14 @@ export default function CatFileSimulator() {
           <div ref={bottomRef} />
         </div>
         
-        <div style={{ display: 'flex', alignItems: 'center', color: '#fff', borderTop: '1px solid #333', paddingTop: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', color: 'var(--text)', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
           <span style={{ color: 'var(--green)', marginRight: '8px' }}>~ $</span>
           <input 
             type="text" 
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleCommand}
-            style={{ background: 'transparent', border: 'none', color: '#fff', outline: 'none', flex: 1, fontFamily: 'inherit', fontSize: 'inherit' }}
+            style={{ background: 'transparent', border: 'none', color: 'var(--text)', outline: 'none', flex: 1, fontFamily: 'inherit', fontSize: 'inherit' }}
             placeholder="git cat-file -p HEAD"
             spellCheck="false"
           />

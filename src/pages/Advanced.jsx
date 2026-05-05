@@ -233,7 +233,7 @@ const styles = `
   .bisect-detail-hash { color: var(--accent2); font-weight: 700; margin-bottom: 4px; }
   .bisect-detail-msg { color: var(--text); font-size: 14px; margin-bottom: 4px; }
   .bisect-detail-meta { color: var(--text3); font-size: 11px; }
-  .bisect-detail-diff { margin-top: 12px; background: #0d1117; border-radius: 6px; padding: 12px; overflow-x: auto; }
+  .bisect-detail-diff { margin-top: 12px; background: var(--bg2); border-radius: 6px; padding: 12px; overflow-x: auto; }
   .bisect-detail-diff .add { color: #7dcf85; }
   .bisect-detail-diff .del { color: #f87171; }
   .bisect-detail-diff .neu { color: #6e7681; }
@@ -267,7 +267,7 @@ const styles = `
 
   .bisect-auto-btn { padding: 8px 18px; border-radius: 8px; background: rgba(139,92,246,0.08); border: 1px solid rgba(139,92,246,0.3); color: var(--accent2); font-family: var(--font-mono); font-size: 12px; cursor: pointer; transition: all 0.15s; }
   .bisect-auto-btn:hover { background: rgba(139,92,246,0.15); }
-  .bisect-auto-log { font-family: var(--font-mono); font-size: 12px; color: var(--text2); line-height: 1.8; background: #0d1117; border-radius: 8px; padding: 14px; margin-top: 12px; max-height: 180px; overflow-y: auto; }
+  .bisect-auto-log { font-family: var(--font-mono); font-size: 12px; color: var(--text2); line-height: 1.8; background: var(--bg2); border-radius: 8px; padding: 14px; margin-top: 12px; max-height: 180px; overflow-y: auto; }
   .bisect-auto-log .ok { color: #7dcf85; }
   .bisect-auto-log .fail { color: #f87171; }
   .bisect-auto-log .info { color: #79c0ff; }
@@ -858,7 +858,7 @@ function BisectGame() {
                   A manual linear search would have taken up to <strong>{totalCommits} steps</strong>.
                 </div>
                 <div style={{ marginTop: 16 }}>
-                  <code style={{ fontFamily: 'var(--font-mono)', fontSize: 12, display: 'block', background: '#0d1117', padding: 12, borderRadius: 8, color: '#7dcf85', textAlign: 'left' }}>
+                  <code style={{ fontFamily: 'var(--font-mono)', fontSize: 12, display: 'block', background: 'var(--bg2)', padding: 12, borderRadius: 8, color: '#7dcf85', textAlign: 'left' }}>
                     {currentCommit?.hash}… is the first bad commit<br />
                     $ git bisect reset  # return to HEAD
                   </code>

@@ -271,7 +271,7 @@
 
 .btn:hover:not(:disabled) {
   background: var(--border);
-  color: #fff;
+  color: var(--text);
   transform: translateY(-1px);
 }
 

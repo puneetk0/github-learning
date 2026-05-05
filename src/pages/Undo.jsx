@@ -376,7 +376,7 @@ function ReflogExplorer() {
       </div>
       <div style={{ padding: 20 }}>
         {/* Reflog terminal */}
-        <div style={{ background: '#0d1117', borderRadius: 8, padding: 16, marginBottom: 16, fontFamily: 'var(--font-mono)', fontSize: 12 }}>
+        <div style={{ background: 'var(--bg2)', borderRadius: 8, padding: 16, marginBottom: 16, fontFamily: 'var(--font-mono)', fontSize: 12 }}>
           <div style={{ color: '#39d353', marginBottom: 10 }}>$ git reflog</div>
           {entries.map(e => (
             <div key={e.idx} onClick={() => { setSelected(e.idx); setRecovered(false); }}
@@ -510,7 +510,7 @@ function RestoreSandbox() {
 
         {/* Activity log */}
         {log.length > 0 && (
-          <div style={{ background: '#0d1117', borderRadius: 8, padding: 12, fontFamily: 'var(--font-mono)', fontSize: 12 }}>
+          <div style={{ background: 'var(--bg2)', borderRadius: 8, padding: 12, fontFamily: 'var(--font-mono)', fontSize: 12 }}>
             {log.map((l, i) => (
               <div key={i} style={{ marginBottom: i < log.length - 1 ? 10 : 0, opacity: i === 0 ? 1 : 0.5 }}>
                 <div style={{ color: '#39d353' }}>$ {l.cmd}</div>
@@ -650,7 +650,7 @@ function UndoDecisionTree() {
                 {current.safe ? 'Safe command found' : 'Destructive — use with care'}
               </span>
             </div>
-            <pre style={{ fontFamily: 'var(--font-mono)', fontSize: 14, background: '#0d1117', color: '#39d353', borderRadius: 8, padding: '16px 20px', marginBottom: 16, whiteSpace: 'pre-wrap', lineHeight: 1.8 }}>
+            <pre style={{ fontFamily: 'var(--font-mono)', fontSize: 14, background: 'var(--bg2)', color: '#39d353', borderRadius: 8, padding: '16px 20px', marginBottom: 16, whiteSpace: 'pre-wrap', lineHeight: 1.8 }}>
               $ {current.cmd}
             </pre>
             <div style={{ padding: '14px 16px', background: 'var(--surface)', borderRadius: 8, border: '1px solid var(--border)', fontSize: 13, color: 'var(--text2)', lineHeight: 1.7 }}>

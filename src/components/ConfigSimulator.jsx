@@ -97,14 +97,14 @@ export default function ConfigSimulator() {
             <div ref={bottomRef} />
           </div>
           
-          <div style={{ display: 'flex', alignItems: 'center', color: '#fff' }}>
+          <div style={{ display: 'flex', alignItems: 'center', color: 'var(--text)' }}>
             <span style={{ color: 'var(--green)', marginRight: '8px' }}>~ $</span>
             <input 
               type="text" 
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleCommand}
-              style={{ background: 'transparent', border: 'none', color: '#fff', outline: 'none', flex: 1, fontFamily: 'inherit', fontSize: 'inherit' }}
+              style={{ background: 'transparent', border: 'none', color: 'var(--text)', outline: 'none', flex: 1, fontFamily: 'inherit', fontSize: 'inherit' }}
               placeholder="git config --global user.name ..."
               spellCheck="false"
             />

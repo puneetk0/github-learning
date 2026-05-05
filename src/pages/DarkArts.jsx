@@ -161,7 +161,7 @@ function CommitDateRewriter() {
           <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>Generated Command</div>
           <pre style={{
             fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.8,
-            background: '#050508', border: '1px solid var(--border)', borderRadius: '6px',
+            background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '6px',
             padding: '14px 16px', color: 'var(--green)', margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-all',
             minHeight: '180px',
           }}>{finalCmd}</pre>
@@ -277,7 +277,7 @@ function SecretRemovalFlow() {
                   <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 800, color: '#fff', flexShrink: 0 }}>{i + 1}</div>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text)' }}>{s.icon} {s.title}</span>
                 </div>
-                <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.7, background: '#050508', border: '1px solid var(--border)', borderRadius: '6px', padding: '12px 14px', color: 'var(--green)', margin: '0 0 0 34px', whiteSpace: 'pre-wrap' }}>{s.cmd}</pre>
+                <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.7, background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: '6px', padding: '12px 14px', color: 'var(--green)', margin: '0 0 0 34px', whiteSpace: 'pre-wrap' }}>{s.cmd}</pre>
               </div>
             ))}
           </div>
@@ -317,7 +317,7 @@ function WorktreeVisualizer() {
         {/* Filesystem tree */}
         <div>
           <div style={{ fontSize: '11px', color: 'var(--text3)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Filesystem</div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 2, background: '#050508', borderRadius: '6px', border: '1px solid var(--border)', padding: '14px 16px' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 2, background: 'var(--bg2)', borderRadius: '6px', border: '1px solid var(--border)', padding: '14px 16px' }}>
             <div style={{ color: 'var(--text2)' }}>~/projects/</div>
             <div style={{ color: phase === 2 ? 'var(--text2)' : 'var(--blue)', marginLeft: '16px', fontWeight: phase <= 1 ? 700 : 400 }}>
               {phase === 2 ? '└─' : '├─'} my-app/  {phase === 0 && <span style={{ color: 'var(--accent)', fontSize: '10px' }}>← your only working dir</span>}
@@ -346,7 +346,7 @@ function WorktreeVisualizer() {
         {/* Commands for this phase */}
         <div>
           <div style={{ fontSize: '11px', color: 'var(--text3)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Commands</div>
-          <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.8, background: '#050508', borderRadius: '6px', border: '1px solid var(--border)', padding: '14px 16px', color: 'var(--green)', margin: 0, whiteSpace: 'pre-wrap', minHeight: '180px' }}>
+          <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.8, background: 'var(--bg2)', borderRadius: '6px', border: '1px solid var(--border)', padding: '14px 16px', color: 'var(--green)', margin: 0, whiteSpace: 'pre-wrap', minHeight: '180px' }}>
             {phase === 0 && `# You're here, mid-feature:\ngit status\n# On branch feature/new-dashboard\n# Changes not staged for commit...\n\n# Hotfix drops. Old you would:\n# git stash → checkout main → fix\n# → checkout feature → git stash pop\n# → pray nothing conflicts`}
             {phase === 1 && `# Create the worktree:\ngit worktree add \\\n  .worktrees/hotfix \\\n  -b fix/critical-bug \\\n  origin/main\n\n# cd in and fix the bug:\ncd .worktrees/hotfix\nvim src/payment.js\ngit add -A\ngit commit -m "fix: prevent double charge"\ngit push origin fix/critical-bug\n\n# Your feature dir? Untouched.`}
             {phase === 2 && `# Hotfix merged. Clean up:\ngit worktree remove .worktrees/hotfix\n\n# Back to your feature:\ncd ~/projects/my-app\ngit status\n# Exactly where you left off.\n# No stash pop. No conflicts.\n# No lost work.\n\n# List remaining worktrees:\ngit worktree list`}

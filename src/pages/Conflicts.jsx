@@ -105,7 +105,7 @@ function ConflictTimeline() {
         <div style={{ padding: '8px 14px', background: s.conflict ? 'rgba(248,113,113,0.1)' : 'var(--surface)', borderBottom: `1px solid ${s.conflict ? 'var(--red)' : 'var(--border)'}`, fontSize: '12px', fontFamily: 'var(--font-mono)', color: s.conflict ? 'var(--red)' : 'var(--text3)' }}>
           📄 utils.js {s.conflict && '— CONFLICTED'}
         </div>
-        <div style={{ padding: '12px 16px', background: '#050508', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.7 }}>
+        <div style={{ padding: '12px 16px', background: 'var(--bg2)', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: 1.7 }}>
           {s.file.map((line, i) => {
             const isMarker = line.startsWith('<<<<') || line.startsWith('====') || line.startsWith('>>>>');
             const isOurs   = !isMarker && i > 0 && s.file.slice(0, i).some(l => l.startsWith('<<<<')) && !s.file.slice(0, i).some(l => l.startsWith('===='));

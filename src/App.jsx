@@ -13,6 +13,7 @@ import Advanced from './pages/Advanced';
 import Undo from './pages/Undo';
 import GithubFeatures from './pages/GithubFeatures';
 import Workflows from './pages/Workflows';
+import RealWorld from './pages/RealWorld';
 import BestPractices from './pages/BestPractices';
 import StartupPR from './pages/StartupPR';
 import Cheatsheet from './pages/Cheatsheet';
@@ -56,6 +57,7 @@ function App() {
           <Route path="/undo" element={<Undo />} />
           <Route path="/github-features" element={<GithubFeatures />} />
           <Route path="/workflows" element={<Workflows />} />
+          <Route path="/real-world" element={<RealWorld />} />
           <Route path="/best-practices" element={<BestPractices />} />
           <Route path="/startup-pr" element={<StartupPR />} />
           <Route path="/cheatsheet" element={<Cheatsheet />} />

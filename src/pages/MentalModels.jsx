@@ -236,7 +236,7 @@ function ThreeTreeVisualizer() {
       {/* Terminal log */}
       <div ref={logRef} style={{
         margin: '16px 16px 16px', padding: '12px 16px',
-        background: '#050508', borderRadius: '6px',
+        background: 'var(--bg2)', borderRadius: '6px',
         border: '1px solid var(--border)',
         fontFamily: 'var(--font-mono)', fontSize: '12px',
         maxHeight: '120px', overflowY: 'auto',

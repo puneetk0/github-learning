@@ -393,7 +393,7 @@ function ForcePushSimulator() {
         {result && (
           <div style={{ padding: 16, borderRadius: 8, background: result.type === 'danger' ? 'rgba(220,38,38,0.07)' : 'rgba(5,150,105,0.07)', border: `1px solid ${result.type === 'danger' ? 'rgba(220,38,38,0.25)' : 'rgba(5,150,105,0.25)'}` }}>
             <div style={{ fontWeight: 700, marginBottom: 8, fontSize: 15 }}>{result.title}</div>
-            <pre style={{ fontFamily: 'var(--font-mono)', fontSize: 12, background: '#000', color: result.type === 'danger' ? 'var(--red)' : 'var(--green)', padding: '10px 14px', borderRadius: 6, marginBottom: 10, whiteSpace: 'pre-wrap' }}>{result.cmd}</pre>
+            <pre style={{ fontFamily: 'var(--font-mono)', fontSize: 12, background: 'var(--bg2)', color: result.type === 'danger' ? 'var(--red)' : 'var(--green)', padding: '10px 14px', borderRadius: 6, marginBottom: 10, whiteSpace: 'pre-wrap' }}>{result.cmd}</pre>
             <p style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.6 }}>{result.detail}</p>
           </div>
         )}
@@ -514,7 +514,7 @@ function GitStatusDecoder() {
         <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 4 }}>Click any status code to understand exactly what it means.</div>
       </div>
       <div style={{ padding: 20, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: '#000', borderRadius: 8, padding: 16 }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 13, background: 'var(--bg2)', borderRadius: 8, padding: 16 }}>
           <div style={{ color: 'var(--green)', marginBottom: 10 }}>$ git status --short</div>
           {statuses.map((s, i) => (
             <div key={i} onClick={() => setSelected(i)} style={{ display: 'flex', gap: 12, alignItems: 'center', padding: '5px 8px', borderRadius: 4, cursor: 'pointer', background: selected === i ? 'rgba(255,255,255,0.07)' : 'transparent', border: selected === i ? `1px solid ${s.color}44` : '1px solid transparent', marginBottom: 2 }}>

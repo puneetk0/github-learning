@@ -736,7 +736,7 @@ function WorktreeVisualizer() {
             <div style={{ marginBottom: 12, fontSize: 13, color: 'var(--text2)', lineHeight: 1.65 }}>
               <strong>The problem:</strong> You're deep in a feature. A P0 bug just came in on <code style={{ fontFamily: 'var(--font-mono)', fontSize: 12, background: 'var(--bg3)', padding: '1px 5px', borderRadius: 3 }}>main</code>. The old workflow is painful:
             </div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, background: '#000', borderRadius: 8, padding: 16, color: '#aaa', lineHeight: 2 }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, background: 'var(--bg2)', borderRadius: 8, padding: 16, color: '#aaa', lineHeight: 2 }}>
               <div><span style={{ color: '#dc2626' }}>$ git stash</span>  <span style={{ color: '#555' }}># hope you don't forget</span></div>
               <div><span style={{ color: '#dc2626' }}>$ git checkout main</span></div>
               <div><span style={{ color: '#dc2626' }}>$ # fix bug, commit, push</span></div>

@@ -80,7 +80,7 @@ export default function InteractivePatchStaging() {
             </>
           )}
           
-          <div style={{ marginTop: '24px', color: 'var(--text2)', fontStyle: 'italic', fontSize: '12px', borderTop: '1px solid #333', paddingTop: '12px' }}>
+          <div style={{ marginTop: '24px', color: 'var(--text2)', fontStyle: 'italic', fontSize: '12px', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
             Insight: By selectively staging, you can create one clean commit for the bug fix, and a separate clean commit for the new feature, even though you wrote them in the same file!
           </div>
         </div>
@@ -99,10 +99,10 @@ export default function InteractivePatchStaging() {
       <div style={{ background: 'var(--bg2)', padding: '16px', fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--text)' }}>
         <div style={{ color: 'var(--green)', marginBottom: '16px' }}>$ git add -p cart.js</div>
         
-        <div style={{ color: '#fff', marginBottom: '8px' }}>diff --git a/cart.js b/cart.js</div>
+        <div style={{ color: 'var(--text)', marginBottom: '8px' }}>diff --git a/cart.js b/cart.js</div>
         <div style={{ color: 'var(--blue)', marginBottom: '8px' }}>{currentHunk.header}</div>
         
-        <div style={{ marginBottom: '16px', background: '#000', borderRadius: '4px', overflow: 'hidden' }}>
+        <div style={{ marginBottom: '16px', background: 'var(--bg2)', borderRadius: '4px', overflow: 'hidden' }}>
           {currentHunk.oldLines.map((line, idx) => renderDiffLine(line, idx))}
         </div>
         

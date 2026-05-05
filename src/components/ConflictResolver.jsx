@@ -361,7 +361,7 @@ export default function ConflictResolver() {
         </div>
 
         {/* Line-colored overlay + textarea */}
-        <div style={{ position: 'relative', borderRadius: '6px', overflow: 'hidden', border: '1px solid var(--border)', background: '#050508' }}>
+        <div style={{ position: 'relative', borderRadius: '6px', overflow: 'hidden', border: '1px solid var(--border)', background: 'var(--bg2)' }}>
           {/* Colored line backgrounds */}
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', padding: '12px 12px 12px 44px', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '22px' }}>
             {outputLines.map((line, i) => {

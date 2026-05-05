@@ -96,7 +96,7 @@ function ForkPRFlow() {
               disabled={activeStep === steps.length - 1} onClick={() => setActiveStep(s => s + 1)}>Next →</button>
           </div>
         </div>
-        <div style={{ padding: '20px', background: '#050508' }}>
+        <div style={{ padding: '20px', background: 'var(--bg2)' }}>
           <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', color: 'var(--text3)', marginBottom: '10px' }}>Terminal</div>
           <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: steps[activeStep].color, lineHeight: 1.8, margin: 0, whiteSpace: 'pre-wrap' }}>
             {steps[activeStep].cmd}

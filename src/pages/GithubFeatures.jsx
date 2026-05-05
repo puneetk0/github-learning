@@ -165,7 +165,7 @@ const styles = `
   .pr-comment.changes .pr-comment-header { background: rgba(220,38,38,0.05); border-bottom-color: rgba(220,38,38,0.2); }
   .pr-comment.inline { }
   .pr-comment-body { padding: 12px 14px; font-size: 13px; color: var(--text2); line-height: 1.6; }
-  .pr-comment-diff { background: #0d1117; border-radius: 6px; padding: 10px 12px; font-family: var(--font-mono); font-size: 11px; margin-bottom: 10px; }
+  .pr-comment-diff { background: var(--bg2); border-radius: 6px; padding: 10px 12px; font-family: var(--font-mono); font-size: 11px; margin-bottom: 10px; }
   .pr-comment-diff .add { color: #7dcf85; }
   .pr-comment-diff .del { color: #f87171; }
   .pr-comment-diff .neu { color: #6e7681; }
@@ -250,7 +250,7 @@ const styles = `
   .actions-add-step { width: 100%; padding: 8px; border-radius: 8px; border: 1px dashed var(--border); background: none; font-family: var(--font-mono); font-size: 12px; color: var(--text3); cursor: pointer; transition: all 0.15s; }
   .actions-add-step:hover { border-color: var(--accent2); color: var(--accent2); }
   /* YAML preview */
-  .actions-yaml { background: #0d1117; height: 100%; min-height: 320px; padding: 16px; font-family: var(--font-mono); font-size: 12px; line-height: 1.8; overflow-y: auto; }
+  .actions-yaml { background: var(--bg2); height: 100%; min-height: 320px; padding: 16px; font-family: var(--font-mono); font-size: 12px; line-height: 1.8; overflow-y: auto; }
   .yaml-key { color: #79c0ff; }
   .yaml-val { color: #a5d6ff; }
   .yaml-str { color: #a8ff78; }

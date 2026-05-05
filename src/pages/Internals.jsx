@@ -349,7 +349,7 @@ const styles = `
   .plumb-header { background: #1a1a2e; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
   .plumb-dot { width: 12px; height: 12px; border-radius: 50%; }
   .plumb-header-title { margin-left: auto; font-family: var(--font-mono); font-size: 12px; color: #4a5568; }
-  .plumb-body { background: #0d1117; padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; min-height: 220px; max-height: 400px; overflow-y: auto; }
+  .plumb-body { background: var(--bg2); padding: 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.8; min-height: 220px; max-height: 400px; overflow-y: auto; }
   .plumb-line-prompt { color: #58a6ff; }
   .plumb-line-cmd { color: #e2e8f0; }
   .plumb-line-out { color: #7dcf85; }
@@ -359,7 +359,7 @@ const styles = `
   .plumb-controls { padding: 16px; background: var(--surface); border-top: 1px solid var(--border); display: flex; gap: 10px; flex-wrap: wrap; }
   .plumb-cmd-btn {
     padding: 8px 16px; border-radius: 6px;
-    background: #0d1117; border: 1px solid #30363d;
+    background: var(--bg2); border: 1px solid #30363d;
     font-family: var(--font-mono); font-size: 12px; color: #58a6ff;
     cursor: pointer; transition: all 0.15s;
   }

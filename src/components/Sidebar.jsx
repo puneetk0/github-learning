@@ -15,7 +15,8 @@ import {
   GitPullRequest,
   Network,
   ListChecks,
-  FlaskConical
+  FlaskConical,
+  AlertTriangle
 } from 'lucide-react';
 import CommandSearch from './CommandSearch';
 import './Sidebar.css';
@@ -38,10 +39,11 @@ export default function Sidebar() {
     
     { path: '/github-features', icon: <GitPullRequest />, label: '11. GitHub Features', section: 'Ecosystem' },
     { path: '/workflows', icon: <Network />, label: '12. Real-World Workflows', section: 'Ecosystem' },
+    { path: '/real-world', icon: <AlertTriangle />, label: '13. Git in the Real World', section: 'Ecosystem' },
     
-    { path: '/best-practices', icon: <ShieldAlert />, label: '13. Best Practices', section: 'Reference' },
-    { path: '/startup-pr', icon: <GitCommit />, label: '14. Your First PR', section: 'Reference' },
-    { path: '/cheatsheet', icon: <ListChecks />, label: '15. Cheatsheet', section: 'Reference' },
+    { path: '/best-practices', icon: <ShieldAlert />, label: '14. Best Practices', section: 'Reference' },
+    { path: '/startup-pr', icon: <GitCommit />, label: '15. Your First PR', section: 'Reference' },
+    { path: '/cheatsheet', icon: <ListChecks />, label: '16. Cheatsheet', section: 'Reference' },
   ];
 
   let currentSection = '';

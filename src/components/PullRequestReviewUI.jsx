@@ -35,7 +35,7 @@ export default function PullRequestReviewUI() {
         </div>
       </div>
       
-      <div style={{ background: '#0d1117', padding: '24px', color: '#c9d1d9' }}>
+      <div style={{ background: 'var(--bg2)', padding: '24px', color: '#c9d1d9' }}>
         
         {/* Diff Viewer */}
         <div style={{ border: '1px solid #30363d', borderRadius: '6px', overflow: 'hidden', marginBottom: '24px' }}>
@@ -83,7 +83,7 @@ export default function PullRequestReviewUI() {
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
               placeholder="Leave a comment (e.g., 'nit: we should also catch the database error here')"
-              style={{ width: '100%', height: '80px', background: '#0d1117', border: '1px solid #30363d', borderRadius: '6px', padding: '8px', color: '#c9d1d9', fontFamily: 'inherit', resize: 'vertical', marginBottom: '12px' }}
+              style={{ width: '100%', height: '80px', background: 'var(--bg2)', border: '1px solid #30363d', borderRadius: '6px', padding: '8px', color: '#c9d1d9', fontFamily: 'inherit', resize: 'vertical', marginBottom: '12px' }}
             />
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <button type="submit" className="btn" style={{ background: '#21262d', border: '1px solid #30363d', color: '#c9d1d9' }} disabled={!newComment.trim()}>
